@@ -20,7 +20,7 @@ import java.util.Map;
  * @since 0.0.1
  */
 @SpringBootApplication
-@RibbonClient("user-service-provider") // 指定目标应用名称
+@RibbonClient("user-service-provider") // 指定目标应用名称(可以使用@RibbonClients指定多个源服务)
 public class UserRibbonClientApplication {
 
     public static void main(String[] args) {
@@ -36,6 +36,4 @@ public class UserRibbonClientApplication {
     public IRule myRule() {
         return new MyRule();
     }
-
-
 }
