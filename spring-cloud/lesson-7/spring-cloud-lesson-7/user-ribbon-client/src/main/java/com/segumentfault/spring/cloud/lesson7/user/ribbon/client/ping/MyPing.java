@@ -8,6 +8,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
+import java.time.LocalDateTime;
 
 /**
  * 实现 {@link IPing} 接口：检查对象 /health 是否正常状态码:200
@@ -35,6 +36,7 @@ public class MyPing implements IPing {
 
         ResponseEntity responseEntity = restTemplate.getForEntity(uri, String.class);
         // 当响应状态等于 200 时，返回 true ，否则 false
+        System.out.println(LocalDateTime.now()+"--->" + responseEntity.getStatusCode());
         return HttpStatus.OK.equals(responseEntity.getStatusCode());
     }
 

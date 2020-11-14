@@ -36,4 +36,15 @@ public class UserRibbonClientApplication {
     public IRule myRule() {
         return new MyRule();
     }
+
+    /**
+     * 将 {@link MyPing} 暴露成 {@link Bean}
+     *
+     * user-service-provider.ribbon.NFLoadBalancerPingClassName
+     * @return {@link MyPing}
+     */
+//    @Bean
+//    public IPing myPing() {
+//        return new MyPing();
+//    }
 }
