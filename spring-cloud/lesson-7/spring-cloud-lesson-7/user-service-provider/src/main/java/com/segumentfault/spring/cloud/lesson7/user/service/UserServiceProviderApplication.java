@@ -7,6 +7,8 @@ import org.springframework.cloud.netflix.ribbon.RibbonClient;
 /**
  * 引导类
  *
+ * 分别以9090 9091端口启动
+ *
  * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @since 0.0.1
  */
